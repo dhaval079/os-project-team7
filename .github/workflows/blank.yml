@@ -1,5 +1,6 @@
 name: First Workflow
-on: workflow_dispatch
+on:
+  pull_request
 jobs:
   first-job:
     runs-on: ubuntu-latest
