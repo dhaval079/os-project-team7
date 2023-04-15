@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Page Replacement</title>
+
+
+    <link rel="stylesheet" href="style1.css">
+
+    <script type="text/javascript" src="lru.js"></script>
+
+  </head>
+  <body>
+    <h1 class="display-9">MRU Page Replacement Algorithm</h1>
+
+    <div class="container">
+      <div>
+
+     
+
+        <form name="Need">
+          <div class="form-group" style="float:left;">
+            <label>Number of Frames:</label>
+            <br>
+
+            <input type="number" id="noofFrames">
+
+          </form>
+          <br>
+          <form name="resource">
+            <div class="form-group" float:right;>
+
+              <label>Number of Pages:</label>
+              <input class="form-control"
+                type="Number" onkeyup="BuildFormFields(parseInt(this.value,
+                10));" />
+
+              <br>
+              <p>Enter the page sequence:</p>
+              <div id="FormFields" style=""></div>
+            </div>
+          </form>
+          <br>
+        </div>
+      </div>
+    </div>
+    <div>
+      <button style="margin-right: 16px" class="btn btn-primary
+        btn-success" onclick="MRU()">Submit</button>
+    </div>
+    <table id="tab_need" class="table table-striped table-hover">
+    </table>
+    <table id="tab_alloc" class="table table-striped table-hover">
+    </table>
+  </body>
+</html>
