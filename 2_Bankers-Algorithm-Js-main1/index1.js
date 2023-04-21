@@ -165,6 +165,6 @@ let newnote8=practice_collectionNeweditedSeq({
     res.redirect("/");
 })
 
-app.listen(5000,function(){
+app.listen(5502,function(){
     console.log("Server Connected Successfully");
 })
