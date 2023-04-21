@@ -6,5 +6,5 @@ pool:
 
 steps:
   - script: |
-      echo "Hello, world!" # This is an example script step. Replace this with your own script.
-    displayName: 'Run a script' # This is the display name for the step. Replace this with a description of what the step does.
+      echo "Hello, world!" 
+    displayName: 'Run a script'
