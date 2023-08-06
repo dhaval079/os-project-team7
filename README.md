@@ -90,13 +90,15 @@ npm install
 4. Create a `.env` file in the `server` directory and set the required environment variables (e.g., `PORT`, `MONGODB_URI`).
 
 5. Launch the server and client applications:
-
-bash
+```bash
 cd server
 npm start
+```
+
+```bash
 cd client
 npm start
-
+```
 
 Now, you should be able to access the simulator by visiting `http://localhost:3000` in your web browser.
 
