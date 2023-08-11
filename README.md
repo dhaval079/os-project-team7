@@ -32,7 +32,7 @@ Our simulator offers the following key features:
 
 ## Technologies Used
 
-- MERN Stack (MongoDB, Express.js, React.js, Node.js): For building the interactive web application.
+- Html,Css,Js: For building the interactive web application.
 - Docker: For containerizing the application and ensuring easy deployment.
 - CircleCI: For setting up the Continuous Integration and Continuous Deployment (CI/CD) pipeline.
 - Apache Tomcat: For hosting the backend on the localhost.
