@@ -1,7 +1,7 @@
 # OS_Project-Team7 - Operating System Algorithms Simulator
 
-![GitHub repo size](https://img.shields.io/github/repo-size/dhaval079/Price-Prediction-Model)
-![GitHub last commit](https://img.shields.io/github/last-commit/dhaval079/Price-Prediction-Model)
+![GitHub repo size](https://img.shields.io/github/repo-size/dhaval079/os-project-team7)
+![GitHub last commit](https://img.shields.io/github/last-commit/dhaval079/os-project-team7)
 
 Welcome to the OS_Project-Team7 repository! This repository contains an amazing website that serves as a simulator for various algorithms used in the Operating System subject. Our simulator covers four popular algorithms: Round Robin, Banker's Algorithm, Disk Scheduling, and MRU (Most Recently Used). With this simulator, you can gain hands-on experience and better understanding of these algorithms in a practical and interactive manner.
 
