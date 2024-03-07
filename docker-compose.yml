@@ -1,0 +1,22 @@
+version: '3.9'
+
+services:
+  roundrobin:
+    build: ./1_Roundrobin
+    ports: 
+      - "8001:8000"
+
+  banker:
+    build: ./2_Bankers-Algorithm-Js-main1
+    ports: 
+      - "8002:5000"
+
+  disk:
+    build: ./3_Disk
+    ports: 
+      - "8003:5505"
+ 
+  mru:
+    build: ./4_MRU
+    ports: 
+    - "8004:5506"

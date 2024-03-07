@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Round Robin</title>
+        <style>
+        body{
+            background-color:#1f2641;
+            color: white;
+            background-image: url("images/bg-texture.png");
+        }
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }   
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border: 1px solid #ddd;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        tr:hover {
+            background-color: black;
+        }
+
+        th {
+            color: white;
+        }
+
+        .process {
+            margin-bottom: 20px;
+        }
+
+        .process h3 {
+            margin-bottom: 10px;
+        }
+        .container{
+        display:flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin: 5rem;
+        
+        }
+        h2{
+            justify-content: center;
+            text-align: center;
+            /* margin-top: 2rem; */
+            margin: auto;
+            padding: 1rem;
+            width: 50rem;
+            font-size: 3rem;
+        }
+        input{
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            border: 2px solid #3f4c80;
+            border-radius: 0.3rem;
+        }
+        form{
+            border: 2px solid;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 1.3rem;
+        }
+        #head{
+            font-size: 1.3rem;
+        }
+        .btn{
+            background-color: white;
+            color: black;
+            width: 5rem;
+            margin-right: 1rem;
+            margin-top: 1rem;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            height: 2rem;
+            border-radius: 0.3rem;
+            display:inline-flex;
+            transition: all ease 1s;
+        }
+        .btn:hover{
+            transform:translate(-2%,2%);
+        }
+    </style>
+    </head>
+    <body>
+        <h2>Round Robin Algorithm</h2>
+        <div class="container">
+            <form id="myform" action="/" method="POST">
+                <label for="tq" id="head">Enter the time quantum:</label><br><br>
+                <input type="text" id="tq"  name="timeQuantum" placeholder="eg 2"><br><br>
+
+                <label id="head" >Enter the arrival times of the processes:</label>
+                <br><br>
+                <label for="a1" ></label><input type="text" id="a1" 
+                    name="inputa1"  placeholder="eg 3"><br><br>
+                <label for="a2"></label><input type="text" id="a2" 
+                    name="inputa2"  placeholder="eg 4"><br><br>
+                <label for="a3"></label><input type="text" id="a3" 
+                    name="inputa3"  placeholder="eg 5"><br><br>
+                <label for="a4"></label><input type="text" id="a4" 
+                    name="inputa4"  placeholder="eg 6"><br><br>
+                <br><br>
+
+                <label id="head">Enter the burst times of the processes:</label><br><br>
+                <label for="b1"></label><input type="text" id="b1" 
+                    name="inputb1"  placeholder="eg 7"><br><br>
+                <label for="b2"></label><input type="text" id="b2" 
+                    name="inputb2"  placeholder="eg 8"><br><br>
+                <label for="b3"></label><input type="text" id="b3" 
+                    name="inputb3"  placeholder="eg 3"><br><br>
+                <label for="b4"></label><input type="text" id="b4" 
+                    name="inputb4"  placeholder="eg 2"><br><br>
+                <a onclick="runScheduler()" value="Submit" class="btn">Submit</a>
+                <button value="submit">Database</button>
+            </form>
+
+            <table>
+                <br>
+                <br>
+                <tr>
+                    <th>Process No.</th>
+                    <th>Arrival Time</th>
+                    <th>Burst Time</th>
+                    <th>Wait Time</th>
+                    <th>Turnaround Time</th>
+                    <th>Completion Time</th>
+                </tr>
+                <!-- dynamically add rows for each process -->
+            </table>
+        </div>
+        <script src="roundrobin.js"></script>
+
+    </body>
+</html>

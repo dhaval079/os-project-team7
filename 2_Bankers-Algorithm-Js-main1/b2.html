@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link  rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" >
+
+    <!-- Custom CSS -->
+    <link  rel="stylesheet" href="csss/b2.css" >
+    <!-- Title of the page -->
+    <title>Banker's Algortithm</title>
+  
+  </head>
+  <body id="body">
+    <!-- Background Animation Starts -->
+  <div class="main">
+    <div class="container">
+      <ul class="circles">
+        <li></li> 
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+    <!-- Background Animation Ends -->
+    <h1 id="response"></h1>
+    <!-- Main Algo Implementation Starts -->
+    <div class="container pt-5">
+      <h2 class="text-center subheading" style="font-weight: bolder;">Banker's Algorithm Simulator</h2>
+    </div>
+     <form action="/" method="POST">
+       <div class="container">
+       <div class="row p-2 pt-5">
+        <!-- Total Instance Form Starts -->
+        <div class="col-4 text-center">
+          <div class="input-group mb-3" >
+            <div class="input-group-prepend">
+              <span class="input-group-text" class="box"  id="basic-addon1">No of Instances of Resource A</span>
+            </div>
+            <input  size="2" maxlength="2" class="form-control" class="box"  id="resourceA" name="resA" >
+          </div> 
+        </div>
+        <div class="col-4 text-center">
+          <div class="input-group mb-3" >
+            <div class="input-group-prepend" >
+              <span class="input-group-text" class="box" id="basic-addon1">No of Instances of Resource B</span>
+            </div>
+            <input  size="2" maxlength="2" class="form-control" class="box" id="resourceB" name="resB">
+          </div> 
+        </div>
+        <div class="col-4 text-center">
+          <div class="input-group mb-3" >
+            <div class="input-group-prepend" >
+              <span class="input-group-text" class="box" id="basic-addon1">No of Instances of Resource C</span>
+            </div>
+            <input  size="2" maxlength="2" class="form-control" class="box" id="resourceC" name="resC">
+          </div> 
+        </div>
+      </form>
+        <!-- Total Instance Form Ends -->
+      </div>
+    </div>
+
+    <form  action="" method="POST">
+    <div class="container pt-5">
+      <div class="row">
+        <!-- Allocation Form Starts -->
+        <div class="col-3 text-center">
+          <table class="text-center">
+            <thead>
+              <tr>
+                <th colspan="4"><h4>Allocation</h4></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td></td>
+                <td>A</td>
+                <td>B</td>
+                <td>C</td>
+              </tr>
+              <tr>
+                <td>P1</td>
+                <td><input size="2" maxlength="2" id="a11" class="box" name="varA"></td>
+                <td><input size="2" maxlength="2" id="a12" class="box" name="varB"></td>
+                <td><input size="2" maxlength="2" id="a13" class="box" name="varC"></td>
+              </tr>
+              <tr>
+                <td>P2</td>
+                <td><input size="2" maxlength="2" id="a21" class="box" name="var1"></td>
+                <td><input size="2" maxlength="2" id="a22" class="box" name="var2"></td>
+                <td><input size="2" maxlength="2" id="a23" class="box" name="var3"></td>
+              </tr>
+              <tr>
+                <td>P3</td>
+                <td><input size="2" maxlength="2" id="a31" class="box" name="var4"></td>
+                <td><input size="2" maxlength="2" id="a32" class="box" name="var5"></td>
+                <td><input size="2" maxlength="2" id="a33" class="box" name="var6"></td>
+              </tr>
+              <tr>
+                <td>P4</td>
+                <td><input size="2" maxlength="2" id="a41" class="box" name="var7"></td>
+                <td><input size="2" maxlength="2" id="a42" class="box" name="var8"></td>
+                <td><input size="2" maxlength="2" id="a43" class="box" name="var9"></td>
+              </tr>
+              <tr>
+                <td>P5</td>
+                <td><input size="2" maxlength="2" id="a51" class="box" name="var10"></td>
+                <td><input size="2" maxlength="2" id="a52" class="box" name="var11"></td>
+                <td><input size="2" maxlength="2" id="a53" class="box" name="var12"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- Allocation Form Ends -->
+
+        <!-- Max Form Starts -->
+        <div class="col-3 text-center">
+          <table class="text-center">
+            <thead>
+              <tr>
+                <th colspan="4"><h4>Maximum</h4></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+
+                <td></td>
+                <td>A</td>
+                <td>B</td>
+                <td>C</td>
+              </tr>
+              <tr>
+                <td>P1</td>
+                <td><input size="2" maxlength="2" id="m11" class="box" name="var13"></td>
+                <td><input size="2" maxlength="2" id="m12" class="box" name="var14"></td>
+                <td><input size="2" maxlength="2" id="m13" class="box" name="var15"></td>
+              </tr>
+              <tr>
+                <td>P2</td>
+                <td><input size="2" maxlength="2" id="m21" class="box" name="var16"></td>
+                <td><input size="2" maxlength="2" id="m22" class="box" name="var17"></td>
+                <td><input size="2" maxlength="2" id="m23" class="box" name="var18"></td>
+              </tr>
+              <tr>
+                <td>P3</td>
+                <td><input size="2" maxlength="2" id="m31" class="box" name="var19"></td>
+                <td><input size="2" maxlength="2" id="m32" class="box" name="var20"></td>
+                <td><input size="2" maxlength="2" id="m33" class="box" name="var21"></td>
+              </tr>
+              <tr>
+                <td>P4</td>
+                <td><input size="2" maxlength="2" id="m41" class="box" name="var22"></td>
+                <td><input size="2" maxlength="2" id="m42" class="box" name="var23"></td>
+                <td><input size="2" maxlength="2" id="m43" class="box" name="var24"></td>
+              </tr>
+              <tr>
+                <td>P5</td>
+                <td><input size="2" maxlength="2" id="m51" class="box"  name="var25"></td>
+                <td><input size="2" maxlength="2" id="m52" class="box"  name="var26"></td>
+                <td><input size="2" maxlength="2" id="m53" class="box"  name="var27"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- Max Form Ends -->
+
+        <!-- Need Form Starts -->
+        <div class="col-3 text-center">
+          <table class="text-center">
+            <thead>
+              <tr>
+                <th colspan="4"><h4>Need</h4></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td></td>
+                <td>A</td>
+                <td>B</td>
+                <td>C</td>
+              </tr>
+              <tr>
+                <td>P1</td>
+                <td><input size="2" maxlength="2" id="n11" class="box"  name="output1"></td>
+                <td><input size="2" maxlength="2" id="n12" class="box"  name="output2" ></td>
+                <td><input size="2" maxlength="2" id="n13" class="box"  name="output3" ></td>
+              </tr>
+              <tr>
+                <td>P2</td>
+                <td><input size="2" maxlength="2" id="n21" class="box"  name="output4" ></td>
+                <td><input size="2" maxlength="2" id="n22" class="box"  name="output5" ></td>
+                <td><input size="2" maxlength="2" id="n23" class="box"  name="output6" ></td>
+              </tr>
+              <tr>
+                <td>P3</td>
+                <td><input size="2" maxlength="2" id="n31" class="box"  name="output7" ></td>
+                <td><input size="2" maxlength="2" id="n32" class="box"  name="output8" ></td>
+                <td><input size="2" maxlength="2" id="n33" class="box"  name="output9" ></td>
+              </tr>
+              <tr>
+                <td>P4</td>
+                <td><input size="2" maxlength="2" id="n41" class="box"  name="output10" ></td>
+                <td><input size="2" maxlength="2" id="n42" class="box"  name="output11" ></td>
+                <td><input size="2" maxlength="2" id="n43" class="box"  name="output12" ></td>
+              </tr>
+              <tr>
+                <td>P5</td>
+                <td><input size="2" maxlength="2" id="n51" class="box"  name="output13" ></td>
+                <td><input size="2" maxlength="2" id="n52" class="box"  name="output14" ></td>
+                <td><input size="2" maxlength="2" id="n53" class="box"  name="output15" ></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- Need Form Ends -->
+
+        <!-- Available Form Starts -->
+        <div class="col-3 text-center">
+          <table class="text-center">
+            <thead>
+              <tr>
+                <th colspan="4"><h4>Available</h4></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td></td>
+                <td>A</td>
+                <td>B</td>
+                <td>C</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td><input size="2" maxlength="2" id="av11"  class="box"  name="output16" ></td>
+                <td><input size="2" maxlength="2" id="av12"  class="box"   name="output17"></td>
+                <td><input size="2" maxlength="2" id="av13"  class="box"   name="output18"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- Available Form Ends -->
+      </div>
+    </form>
+
+      <!-- Algo Buttons Starts -->
+      <div class="row m-5 text-center">
+        <div class="col-4">
+          <a href="#" class="btn btn-secondary" onclick="example()" onclick="SendData()">Example</a>
+        </div>
+        <div class="col-4">
+          <a href="#" class="btn btn-secondary"  onclick="run_algo()">Run Algorithm</a>
+        </div>
+        <div class="col-4">
+          <a href="#" class="btn btn-secondary" onclick="reset()" onclick="SendData()">Reset Values</a>
+        </div>
+        <div>
+          <button class="database" type="Submit" style="background-color:  #978eff;">Submit To Database</button>
+        </div>
+      </div>
+      <!-- Algo Buttons Ends -->
+      
+      <!-- Process Sequence Starts -->
+      <div class="row p-3 mt-3 mb-3">
+        <div class="col-6 offset-4">
+          <h4>Process Sequence :</h4><br>
+          <input id="p1" size="2" maxlength="2" name="processSeq1"/>
+          <input id="p2" size="2" maxlength="2" name="processSeq2"/>
+          <input id="p3" size="2" maxlength="2" name="processSeq3"/>
+          <input id="p4" size="2" maxlength="2" name="processSeq4"/>
+          <input id="p5" size="2" maxlength="2" name="processSeq5"/>
+        </div>
+      </div>
+      <!-- Process Sequence Ends -->
+    </div>
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <!-- Custom JavaScript -->
+    <script  src="b2.js"></script>
+    <script>
+      function SendData(){
+        var r1=document.getElementById("resourceA").value;
+        var r2=document.getElementById("resourceB").value;
+        var r3=document.getElementById("resourceC").value;
+        // var a11=document.getElementById("a11").value;
+        // var a12=document.getElementById("a12").value;
+        // var a13=document.getElementById("a13").value;
+        // var a21=document.getElementById("a21").value;
+        // var a22=document.getElementById("a22").value;
+        // var a23=document.getElementById("a23").value;
+        // var a31=document.getElementById("a31").value;
+        // var a32=document.getElementById("a32").value;
+        // var a33=document.getElementById("a33").value;
+        // var a41=document.getElementById("a41").value;
+        // var a42=document.getElementById("a42").value;
+        // var a43=document.getElementById("a43").value;
+        // var a51=document.getElementById("a51").value;
+        // var a52=document.getElementById("a52").value;
+        // var a53=document.getElementById("a53").value;
+
+        var httpr=new XMLHttpRequest(); 
+        httpr.open("POST","get_data.php" ,true);
+        httpr.setRequestHeader("Content-type","applcation/x-www-form-urlencoded")
+        httpr.onreadystatechange=function(){
+          if(httpr.readyState==4 && httpr.status==200){
+            document.getElementById("response").innerHTML=httpr.responseText;
+          }
+        }
+        httpr.send("r1="+r1+"&r2="+r2+"&r3="+r3);
+      }
+    </script>
+  </div>  
+  </body>
+</html>

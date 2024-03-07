@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Document</title>
+    <style>
+        .roundrobin{
+    border: 2px solid var(--color-bg2);
+    box-shadow: inset 0rem 0rem 6rem rgba(44, 44, 44, 0.901);
+    border-radius: 2rem;
+    width:80rem ;
+    margin-bottom: 17rem;
+}
+.introduction{
+    margin: 1rem 5rem 2rem;
+}
+* {
+    margin: 0;
+    padding:0;
+    border:0;
+    outline:0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+:root{
+    --color-primary:#6c63ff;
+    --color-success:#00bf86;
+    --color-danger:#f75842;
+    --color-warning:#f7c94b;
+    --color-danger-variant:rgba(247,88,66,0.4);
+    --color-white:#fff;
+    --color-light:rgba(255,255,255,0.7);
+    --color-black:#000;
+    --color-bg:#1f2641;
+    --color-bg1:#2e3267;
+    --color-bg2:#424890;
+
+    --conatiner-width-lg:80%;
+    --conatiner-width-md:90%;
+    --conatiner-width-sm:94%;
+
+    --transition:all 400ms ease;
+}
+
+body{
+    font-family: 'Archivo', sans-serif;
+    line-height: 1.7;
+    color:var(--color-white);
+    background-color:#000000;
+    zoom: 0.8;
+}
+
+.container{
+    widht:var(--conatiner-width-lg);
+    margin:0 auto;
+}
+    </style>
+</head>
+<body>
+    <section class="container roundrobin " id="roundrobin">
+        <h2>Round Robin Algorithm</h2>
+        <div class="roundrobin_conatainer">
+            <img src="https://i.pinimg.com/originals/ac/03/cc/ac03cc227746514d3d53c4d93a7fd050.png" id="img">
+            <div class="introduction"> 
+                <h3>Introduction :</h3>
+                <br>
+                <p>Round Robin is a CPU scheduling algorithm where each process is assigned a fixed time slot in a cyclic way. It is basically the preemptive version of First come First Serve CPU Scheduling algorithm.</p>
+                <ul>
+                <li>Round Robin CPU Algorithm generally focuses on Time Sharing technique.</li>
+                <li>The period of time for which a process or job is allowed to run in a pre-emptive method is called time quantum.</li>
+                <li>Each process or job present in the ready queue is assigned the CPU for that time quantum, if the execution of the process is completed during that time then the process will end else the process will go back to the waiting table and wait for its next turn to complete the execution</li>
+                </ul>
+                </div>
+                <br>
+            <div class="char">
+                <h3>Characteristics of Round Robin CPU Scheduling Algorithm :</h3>
+                <br>
+                <p> 
+                    <ul>
+                        <li>It is simple, easy to implement, and starvation-free as all processes get fair share of CPU.</li>
+                        <li>One of the most commonly used technique in CPU scheduling as a core.
+                        </li>
+                        <li>It is preemptive as processes are assigned CPU only for a fixed slice of time at most.
+                        </li>
+                        <li>The disadvantage of it is more overhead of context switching.
+                        </li>
+                    </ul>
+            </div>
+           <div class="adv">
+            <h3>Advantages of Round Robin CPU Scheduling Algorithm :</h3>
+            <br>
+            <ul>
+                <li>There is fairness since every process gets equal share of CPU.</li>
+                <li>The newly created process is added to end of ready queue.
+                </li>
+                <li>A round-robin scheduler generally employs time-sharing, giving each job a time slot or quantum. 
+                </li>
+                <li>While performing a round-robin scheduling, a particular time quantum is allotted to different jobs. 
+                </li>
+                <li>Each process get a chance to reschedule after a particular quantum time in this scheduling. 
+                </li>
+            </ul>
+            </div>
+            
+            <div class="disadv">
+            <h3>Disadvantages of Round Robin CPU Scheduling Algorithm :
+            </h3>
+            <br>
+    <ul>
+    <li>There is Larger waiting time and Response time.
+    </li>
+    <li>There is Low throughput.
+    </li>
+    <li>There is Context Switches.
+    </li>
+    <li>Gantt chart seems to come too big (if quantum time is less for scheduling. For Example:1 ms for big scheduling.)
+    </li>
+    <li>Time consuming scheduling for small quantum.
+    </li>
+    </ul>
+    </div>
+        </div>
+    </section>
+    
+</body>
+</html>
